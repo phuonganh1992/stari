@@ -1,0 +1,174 @@
+/* Hệ màu sắc thương hiệu đồng bộ thiết kế */
+:root {
+    --zen-beige: #F9F5EE;
+    --zen-navy: #0A1D37; 
+    --zen-gold: #D4B26F; 
+}
+
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background-color: var(--zen-beige);
+    color: #333;
+}
+
+.font-serif { font-family: 'Playfair Display', serif; }
+.font-script { font-family: 'Alex Brush', cursive; color: var(--zen-gold); }
+.text-gold { color: var(--zen-gold) !important; }
+.bg-light-custom { background-color: #F1EAE0; }
+.tracking-wide { letter-spacing: 2px; }
+
+/* NAVBAR */
+.navbar {
+    background-color: var(--zen-navy) !important;
+    padding: 15px 0;
+}
+.logo-lotus { color: var(--zen-gold); font-size: 1.8rem; }
+.logo-text .main-title { color: #fff; font-size: 1.3rem; font-weight: 700; line-height: 1; }
+.logo-text .sub-title { color: var(--zen-gold); font-size: 0.55rem; letter-spacing: 2px; }
+
+.nav-link {
+    font-weight: 500;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.85) !important;
+    padding: 8px 16px !important;
+    transition: color 0.3s;
+}
+.nav-link:hover, .nav-link.active { color: var(--zen-gold) !important; }
+
+.btn-lang-dropdown {
+    background-color: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #fff !important;
+    font-size: 0.85rem;
+    padding: 6px 14px;
+    border-radius: 4px;
+}
+
+/* HERO SECTION HOME */
+.hero-section {
+    background: linear-gradient(rgba(10, 29, 55, 0.75), rgba(10, 29, 55, 0.75)), url('https://images.unsplash.com/photo-1540555700478-4be289fbecef?q=80&w=1920') no-repeat center center/cover;
+    height: 75vh;
+    display: flex;
+    align-items: center;
+}
+.hero-description { font-size: 1.05rem; letter-spacing: 0.5px; }
+
+/* ==========================================
+   GIAO DIỆN CƠ SỞ VẬT CHẤT MỚI (시설소개)
+   ========================================== */
+.facility-banner {
+    background: linear-gradient(rgba(10, 29, 55, 0.6), rgba(10, 29, 55, 0.6)), url('https://images.unsplash.com/photo-1519699047748-de8e457a634e?q=80&w=1920') no-repeat center center/cover;
+    height: 35vh;
+}
+
+/* Nút bấm Filter */
+.btn-filter {
+    background-color: transparent;
+    border: 1px solid #ddd;
+    color: #666;
+    font-size: 0.85rem;
+    font-weight: 500;
+    padding: 8px 20px;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+}
+.btn-filter:hover, .btn-filter.active {
+    background-color: var(--zen-navy);
+    border-color: var(--zen-navy);
+    color: #fff;
+}
+
+/* Khung bọc ảnh chống tràn để zoom-in */
+.img-zoom-wrapper {
+    overflow: hidden;
+    position: relative;
+    border-radius: 4px 4px 0 0;
+}
+.img-zoom-wrapper img {
+    transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+    height: 280px;
+    object-fit: cover;
+}
+.gallery-card:hover .img-zoom-wrapper img {
+    transform: scale(1.08); /* Hiệu ứng phóng to nhẹ chuẩn Luxury */
+}
+
+/* Hiệu ứng mượt mà khi ẩn hiện danh mục phòng */
+.facility-item {
+    transition: all 0.4s ease;
+}
+.facility-item.hide {
+    display: none;
+}
+
+/* Elements */
+.btn-zen {
+    background-color: var(--zen-gold); color: var(--zen-navy); font-weight: 600; border-radius: 4px;
+    text-transform: uppercase; letter-spacing: 0.5px; font-size: 0.85rem; padding: 10px 24px;
+    transition: all 0.3s; border: 1px solid var(--zen-gold);
+}
+.btn-zen:hover { background-color: transparent; color: var(--zen-gold); }
+
+.tab-content { display: none; }
+.tab-content.active { display: block; }
+.promo-box { border: 2px dashed var(--zen-gold) !important; border-radius: 6px; }
+
+/* MAP OVERLAY */
+.zen-map-wrapper { position: relative; width: 100%; overflow: hidden; background-color: var(--zen-navy); }
+.map-bg { width: 100%; z-index: 1; }
+.map-bg iframe { height: 650px; opacity: 0.75; }
+.map-overlay-content {
+    position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2;
+    background: linear-gradient(to right, rgba(10, 29, 55, 0.94) 35%, rgba(10, 29, 55, 0.65) 100%);
+    display: flex; align-items: center;
+}
+.overlay-card-dark { padding: 20px 0; }
+.section-title-gold { color: var(--zen-gold); font-size: 2.2rem; letter-spacing: 3px; font-weight: 500; }
+
+@media (min-width: 992px) {
+    .border-lg-end { border-right: 1px solid rgba(255, 255, 255, 0.15) !important; }
+}
+.review-item-card { background-color: #ffffff !important; box-shadow: 0 4px 12px rgba(0,0,0,0.2); min-height: 100px; }
+.review-avatar { width: 24px; height: 24px; line-height: 24px; font-size: 10px; }
+
+.btn-outline-google-review {
+    border: 1px solid var(--zen-gold); color: var(--zen-gold) !important; background-color: transparent;
+    padding: 8px 24px; font-size: 0.85rem; border-radius: 4px; font-weight: 500; transition: all 0.3s ease;
+    text-decoration: none; display: inline-block;
+}
+.btn-outline-google-review:hover { background-color: var(--zen-gold); color: var(--zen-navy) !important; }
+
+footer { background-color: #111; color: #fff; }
+
+.floating-contact { position: fixed; bottom: 25px; right: 25px; z-index: 99999; display: flex; flex-direction: column; gap: 12px; }
+.floating-btn { width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 12px rgba(0,0,0,0.3); transition: transform 0.3s; }
+.floating-btn:hover { transform: scale(1.1); }
+.btn-messenger { background: linear-gradient(135deg, #006AFF, #00C6FF); color: #fff; font-size: 1.5rem; }
+.btn-zalo { background-color: #0068FF; padding: 6px; }
+.btn-zalo img { width: 100%; height: 100%; }
+
+@media (max-width: 991.98px) {
+    .zen-map-wrapper { display: flex; flex-direction: column; }
+    .map-bg { order: 2; }
+    .map-bg iframe { height: 380px; }
+    .map-overlay-content { position: relative; order: 1; padding: 50px 0; background: var(--zen-navy); }
+    .section-title-gold { font-size: 1.7rem; }
+}
+@media (min-width: 1200px) { .border-xl-start { border-left: 1px solid rgba(255, 255, 255, 0.2) !important; } }
+
+/* FADE IN UP ANIMATION */
+.anim-fade-in-up {
+    opacity: 0;
+    transform: translateY(30px);
+    animation-name: fadeInUpAnimation;
+    animation-duration: 1.2s;
+    animation-timing-function: cubic-bezier(0.25, 1, 0.5, 1);
+    animation-fill-mode: forwards;
+}
+.anim-delay-1 { animation-delay: 0.2s; }
+.anim-delay-2 { animation-delay: 0.7s; }
+
+@keyframes fadeInUpAnimation {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
