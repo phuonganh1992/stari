@@ -127,6 +127,32 @@ body {
 .overlay-card-dark { padding: 20px 0; }
 .section-title-gold { color: var(--stari-gold); font-size: 2.2rem; letter-spacing: 3px; font-weight: 500; }
 
+
+/* Style dành cho class bao bọc bên ngoài */
+.logo-star {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;  /* Giới hạn khung hiển thị trên menu */
+    height: 45px;
+    overflow: hidden; /* Giữ ảnh không tràn ra ngoài menu */
+}
+
+/* Tối ưu riêng cho ảnh logo_star.png để triệt tiêu khoảng trắng thừa */
+.logo-star img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    /* Phóng to phần lõi ngôi sao lên khoảng 1.4 đến 1.5 lần để bù lại khoảng trắng viền ảnh */
+    transform: scale(1.4); 
+    transition: transform 0.3s ease;
+}
+
+/* Hiệu ứng mượt mà khi người dùng di chuột vào logo (tùy chọn) */
+.logo-star:hover img {
+    transform: scale(1.5);
+}
+
 @media (min-width: 992px) {
     .border-lg-end { border-right: 1px solid rgba(255, 255, 255, 0.15) !important; }
 }
