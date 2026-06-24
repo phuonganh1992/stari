@@ -1,30 +1,32 @@
-/* Hệ màu sắc thương hiệu đồng bộ thiết kế */
+/* Hệ màu sắc thương hiệu Stari Wellness Spa đồng bộ thiết kế */
 :root {
-    --zen-beige: #F9F5EE;
-    --zen-navy: #0A1D37; 
-    --zen-gold: #D4B26F; 
+    --stari-beige: #FDFBF7;       /* Nền sáng kem ấm áp, dễ chịu cho mắt */
+    --stari-emerald: #114B3E;     /* Màu xanh lục bảo trầm chủ đạo (Wellness & Forest) */
+    --stari-emerald-dark: #0B332A;/* Xanh lục bảo đậm hơn dùng cho hiệu ứng hover/overlay */
+    --stari-gold: #C5A880;        /* Vàng cát/Be vàng sang trọng cho Logo, Icon và Bút bấm */
+    --stari-mint: #3B7E6F;        /* Xanh bạc hà trầm làm điểm nhấn nhẹ */
 }
 
 body {
     font-family: 'Plus Jakarta Sans', sans-serif;
-    background-color: var(--zen-beige);
-    color: #333;
+    background-color: var(--stari-beige);
+    color: #2D3732;
 }
 
 .font-serif { font-family: 'Playfair Display', serif; }
-.font-script { font-family: 'Alex Brush', cursive; color: var(--zen-gold); }
-.text-gold { color: var(--zen-gold) !important; }
-.bg-light-custom { background-color: #F1EAE0; }
+.font-script { font-family: 'Alex Brush', cursive; color: var(--stari-gold); }
+.text-gold { color: var(--stari-gold) !important; }
+.bg-light-custom { background-color: #F4EFE6; } /* Màu nền phụ ấm áp */
 .tracking-wide { letter-spacing: 2px; }
 
 /* NAVBAR */
 .navbar {
-    background-color: var(--zen-navy) !important;
+    background-color: var(--stari-emerald) !important;
     padding: 15px 0;
 }
-.logo-lotus { color: var(--zen-gold); font-size: 1.8rem; }
+.logo-lotus { color: var(--stari-gold); font-size: 1.8rem; }
 .logo-text .main-title { color: #fff; font-size: 1.3rem; font-weight: 700; line-height: 1; }
-.logo-text .sub-title { color: var(--zen-gold); font-size: 0.55rem; letter-spacing: 2px; }
+.logo-text .sub-title { color: var(--stari-gold); font-size: 0.55rem; letter-spacing: 2px; }
 
 .nav-link {
     font-weight: 500;
@@ -33,7 +35,7 @@ body {
     padding: 8px 16px !important;
     transition: color 0.3s;
 }
-.nav-link:hover, .nav-link.active { color: var(--zen-gold) !important; }
+.nav-link:hover, .nav-link.active { color: var(--stari-gold) !important; }
 
 .btn-lang-dropdown {
     background-color: rgba(255, 255, 255, 0.08);
@@ -46,7 +48,7 @@ body {
 
 /* HERO SECTION HOME */
 .hero-section {
-    background: linear-gradient(rgba(10, 29, 55, 0.75), rgba(10, 29, 55, 0.75)), url('https://images.unsplash.com/photo-1540555700478-4be289fbecef?q=80&w=1920') no-repeat center center/cover;
+    background: linear-gradient(rgba(17, 75, 62, 0.75), rgba(17, 75, 62, 0.75)), url('https://images.unsplash.com/photo-1540555700478-4be289fbecef?q=80&w=1920') no-repeat center center/cover;
     height: 75vh;
     display: flex;
     align-items: center;
@@ -54,10 +56,10 @@ body {
 .hero-description { font-size: 1.05rem; letter-spacing: 0.5px; }
 
 /* ==========================================
-   GIAO DIỆN CƠ SỞ VẬT CHẤT MỚI (시설소개)
+   GIAO DIỆN CƠ SỞ VẬT CHẤT
    ========================================== */
 .facility-banner {
-    background: linear-gradient(rgba(10, 29, 55, 0.6), rgba(10, 29, 55, 0.6)), url('https://images.unsplash.com/photo-1519699047748-de8e457a634e?q=80&w=1920') no-repeat center center/cover;
+    background: linear-gradient(rgba(17, 75, 62, 0.6), rgba(17, 75, 62, 0.6)), url('https://images.unsplash.com/photo-1519699047748-de8e457a634e?q=80&w=1920') no-repeat center center/cover;
     height: 35vh;
 }
 
@@ -65,7 +67,7 @@ body {
 .btn-filter {
     background-color: transparent;
     border: 1px solid #ddd;
-    color: #666;
+    color: #55625B;
     font-size: 0.85rem;
     font-weight: 500;
     padding: 8px 20px;
@@ -73,8 +75,8 @@ body {
     transition: all 0.3s ease;
 }
 .btn-filter:hover, .btn-filter.active {
-    background-color: var(--zen-navy);
-    border-color: var(--zen-navy);
+    background-color: var(--stari-emerald);
+    border-color: var(--stari-emerald);
     color: #fff;
 }
 
@@ -90,7 +92,7 @@ body {
     object-fit: cover;
 }
 .gallery-card:hover .img-zoom-wrapper img {
-    transform: scale(1.08); /* Hiệu ứng phóng to nhẹ chuẩn Luxury */
+    transform: scale(1.08);
 }
 
 /* Hiệu ứng mượt mà khi ẩn hiện danh mục phòng */
@@ -103,42 +105,42 @@ body {
 
 /* Elements */
 .btn-zen {
-    background-color: var(--zen-gold); color: var(--zen-navy); font-weight: 600; border-radius: 4px;
+    background-color: var(--stari-gold); color: var(--stari-emerald-dark); font-weight: 600; border-radius: 4px;
     text-transform: uppercase; letter-spacing: 0.5px; font-size: 0.85rem; padding: 10px 24px;
-    transition: all 0.3s; border: 1px solid var(--zen-gold);
+    transition: all 0.3s; border: 1px solid var(--stari-gold);
 }
-.btn-zen:hover { background-color: transparent; color: var(--zen-gold); }
+.btn-zen:hover { background-color: transparent; color: var(--stari-gold); }
 
 .tab-content { display: none; }
 .tab-content.active { display: block; }
-.promo-box { border: 2px dashed var(--zen-gold) !important; border-radius: 6px; }
+.promo-box { border: 2px dashed var(--stari-gold) !important; border-radius: 6px; }
 
 /* MAP OVERLAY */
-.zen-map-wrapper { position: relative; width: 100%; overflow: hidden; background-color: var(--zen-navy); }
+.zen-map-wrapper { position: relative; width: 100%; overflow: hidden; background-color: var(--stari-emerald); }
 .map-bg { width: 100%; z-index: 1; }
 .map-bg iframe { height: 650px; opacity: 0.75; }
 .map-overlay-content {
     position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2;
-    background: linear-gradient(to right, rgba(10, 29, 55, 0.94) 35%, rgba(10, 29, 55, 0.65) 100%);
+    background: linear-gradient(to right, rgba(11, 51, 42, 0.96) 35%, rgba(11, 51, 42, 0.7) 100%);
     display: flex; align-items: center;
 }
 .overlay-card-dark { padding: 20px 0; }
-.section-title-gold { color: var(--zen-gold); font-size: 2.2rem; letter-spacing: 3px; font-weight: 500; }
+.section-title-gold { color: var(--stari-gold); font-size: 2.2rem; letter-spacing: 3px; font-weight: 500; }
 
 @media (min-width: 992px) {
     .border-lg-end { border-right: 1px solid rgba(255, 255, 255, 0.15) !important; }
 }
-.review-item-card { background-color: #ffffff !important; box-shadow: 0 4px 12px rgba(0,0,0,0.2); min-height: 100px; }
+.review-item-card { background-color: #ffffff !important; box-shadow: 0 4px 12px rgba(0,0,0,0.15); min-height: 100px; }
 .review-avatar { width: 24px; height: 24px; line-height: 24px; font-size: 10px; }
 
 .btn-outline-google-review {
-    border: 1px solid var(--zen-gold); color: var(--zen-gold) !important; background-color: transparent;
+    border: 1px solid var(--stari-gold); color: var(--stari-gold) !important; background-color: transparent;
     padding: 8px 24px; font-size: 0.85rem; border-radius: 4px; font-weight: 500; transition: all 0.3s ease;
     text-decoration: none; display: inline-block;
 }
-.btn-outline-google-review:hover { background-color: var(--zen-gold); color: var(--zen-navy) !important; }
+.btn-outline-google-review:hover { background-color: var(--stari-gold); color: var(--stari-emerald-dark) !important; }
 
-footer { background-color: #111; color: #fff; }
+footer { background-color: #0A241F; color: #fff; } /* Tone xanh lục cực đậm thay cho màu đen chân trang */
 
 .floating-contact { position: fixed; bottom: 25px; right: 25px; z-index: 99999; display: flex; flex-direction: column; gap: 12px; }
 .floating-btn { width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 12px rgba(0,0,0,0.3); transition: transform 0.3s; }
@@ -151,7 +153,7 @@ footer { background-color: #111; color: #fff; }
     .zen-map-wrapper { display: flex; flex-direction: column; }
     .map-bg { order: 2; }
     .map-bg iframe { height: 380px; }
-    .map-overlay-content { position: relative; order: 1; padding: 50px 0; background: var(--zen-navy); }
+    .map-overlay-content { position: relative; order: 1; padding: 50px 0; background: var(--stari-emerald); }
     .section-title-gold { font-size: 1.7rem; }
 }
 @media (min-width: 1200px) { .border-xl-start { border-left: 1px solid rgba(255, 255, 255, 0.2) !important; } }

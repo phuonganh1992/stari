@@ -40,10 +40,12 @@ window.switchTab = function(tabId) {
         filterFacility('all');
     }
     
-    const menu = document.getElementById('zenNav');
+    const menu = document.getElementById('zenNav'); // Khớp với id="zenNav" trong file HTML của bạn
     if(menu && menu.classList.contains('show')) {
         const bsCollapse = bootstrap.Collapse.getInstance(menu);
-        bsCollapse.hide();
+        if (bsCollapse) {
+            bsCollapse.hide();
+        }
     }
     
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -51,7 +53,7 @@ window.switchTab = function(tabId) {
 
 window.filterFacility = function(category) {
     const filterButtons = document.querySelectorAll('.btn-filter');
-    filterButtons.forEach(btn => btn.classList.remove('active'));
+    document.querySelectorAll('.btn-filter').forEach(btn => btn.classList.remove('active'));
     
     if(event && event.target && event.target.classList.contains('btn-filter')) {
         event.target.classList.add('active');
