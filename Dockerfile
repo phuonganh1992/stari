@@ -11,6 +11,6 @@ COPY . /usr/share/nginx/html
 COPY nginx.conf /etc/nginx/conf.d/default.conf
 
 # Mở port 99
-EXPOSE 80
+EXPOSE 99
 
 CMD ["nginx", "-g", "daemon off;"]
